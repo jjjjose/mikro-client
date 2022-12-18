@@ -15,16 +15,19 @@ jobs:
   update-npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Configurando Node.js e instalando dependencias y compilando
+      - name: Descargar código del repositorio
+        uses: actions/checkout@v3
+      - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Instalando typescript globalmente
-      - run: npm install -g typescript
-      - run: yarn
-      - run: yarn build
-      - name: Actualiazando bliblioteca mikro-client
-      - uses: JS-DevTools/npm-publish@v1
+      - name: Instalar TypeScript
+        run: npm install -g typescript
+      - name: Instalar dependencias
+        run: yarn
+      - name: Compilar proyecto
+        run: yarn build
+      - name: Publicar biblioteca en npm
+        uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
