@@ -1,33 +1,42 @@
-name: Actualizar Biblioteca mikro-client
+# Name of the GitHub Actions job
+name: Publish update of mikro-client library to npm
 
-# Controls when the workflow will run
+# Controls when the job will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # Triggers the job on push or pull request events for the "main" branch
   push:
     branches: ['main']
   pull_request:
     branches: ['main']
 
-  # Habilitar manualmente
+  # Enable manually
   workflow_dispatch:
 
 jobs:
+  # Name of the job
   update-npm:
+    # Run the job on an Ubuntu virtual machine
     runs-on: ubuntu-latest
     steps:
-      - name: Descargar código del repositorio
+      # Download the repository code to the virtual machine
+      - name: Download repository code
         uses: actions/checkout@v3
-      - name: Configurar Node.js
+      # Set up Node.js on the virtual machine and set the version to version 16
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Instalar TypeScript
+      # Install TypeScript globally on the virtual machine
+      - name: Install TypeScript
         run: npm install -g typescript
-      - name: Instalar dependencias
+      # Install all project dependencies on the virtual machine
+      - name: Install dependencies
         run: yarn
-      - name: Compilar proyecto
+      # Build the project on the virtual machine
+      - name: Build project
         run: yarn build
-      - name: Publicar biblioteca en npm
+      # Publish the "mikro-client" library to npm using the authentication token stored in the "NPM_TOKEN" secret
+      - name: Publish library to npm
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}

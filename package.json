@@ -1,7 +1,7 @@
 {
   "name": "mikro-client",
-  "version": "0.0.4",
-  "description": "Sencilla biblioteca echa en TypeScript para la conexion de mikrotik",
+  "version": "0.0.5",
+  "description": "Simple library using socket API to connect and control Mikrotik devices in JavaScript or TypeScript. Allows for easy automation of Mikrotik device management and configuration tasks.",
   "main": "dist/index",
   "types": "dist/index",
   "scripts": {
@@ -77,6 +77,12 @@
   "bugs": {
     "url": "https://github.com/jjjjose/mikro-client/issues"
   },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/jjjjose/mikro-client/main/LICENSE"
+    }
+  ],
   "files": [
     "dist/"
   ],
