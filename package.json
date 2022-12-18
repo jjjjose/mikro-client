@@ -1,0 +1,45 @@
+{
+  "name": "mikro-client",
+  "version": "0.0.1",
+  "description": "Sencilla biblioteca echa en TypeScript para la conexion de mikrotik",
+  "main": "dist/index.js",
+  "scripts": {},
+  "devDependencies": {},
+  "keywords": [
+    "routeros",
+    "mikrotik-hotspot",
+    "routeros-api",
+    "mikrotik-routeros-api",
+    "mikrotik-api",
+    "mikrotik-routeros-script",
+    "routeros-node",
+    "routeros-wrapper",
+    "routeros-scripts",
+    "mikrotik",
+    "routeros-client",
+    "routerboard",
+    "routerboard-api",
+    "node-routeros",
+    "javascript",
+    "typescript",
+    "node",
+    "nodejs",
+    "api",
+    "ros",
+    "socket"
+  ],
+  "author": "jjjjose",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jjjjose/mikro-client"
+  },
+  "homepage": "https://github.com/jjjjose/mikro-client/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/jjjjose/mikro-client/issues"
+  },
+  "files": [
+    "dist/"
+  ],
+  "private": false
+}
