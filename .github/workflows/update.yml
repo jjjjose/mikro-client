@@ -17,14 +17,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Configurando Node.js
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 16
       - name: Instalando dependencias y compilando
-      - run: npm install -g typescript
-      - run: yarn
-      - run: yarn build
+        run: npm install -g typescript
+        run: yarn
+        run: yarn build
       - name: Actualiazando bliblioteca mikro-client
-      - uses: JS-DevTools/npm-publish@v1
+        uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
