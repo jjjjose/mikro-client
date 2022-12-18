@@ -20,7 +20,7 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 12
       - name: Instalar TypeScript
         run: npm install -g typescript
       - name: Instalar dependencias

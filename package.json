@@ -1,6 +1,6 @@
 {
   "name": "mikro-client",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Sencilla biblioteca echa en TypeScript para la conexion de mikrotik",
   "main": "dist/index",
   "types": "dist/index",
