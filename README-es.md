@@ -3,8 +3,9 @@
 Esta biblioteca, escrita en TypeScript y también compatible con JavaScript, proporciona una conexión simple a través de sockets TCP para enviar y recibir comandos de línea de comandos de MikroTik. Con esta biblioteca, puede controlar y obtener información de un dispositivo MikroTik de forma sencilla y rápida.
 
 Version de documentación en:
-- [English](https://github.com/jjjjose/mikro-client/blob/main/README.md "English")
-- [Spanish](https://github.com/jjjjose/mikro-client/blob/main/README-es.md "Spanish")
+- <a href="https://github.com/jjjjose/mikro-client/blob/main/README.md " target="_blank">English</a>
+- <a href="https://github.com/jjjjose/mikro-client/blob/main/README-es.md " target="_blank">Spanish</a>
+
 
 ## Installation
 
@@ -134,7 +135,7 @@ const response = await mikro
 
 Para obtener más información sobre los comandos de MikroTik que puede enviar usando la clase MikroApi, le recomendamos consultar la documentación de MikroTik, que está disponible en el siguiente enlace:
 
-- [API - RouterOS - MikroTik Documentation](https://help.mikrotik.com/docs/display/ROS/API)
+- <a href="https://help.mikrotik.com/docs/display/ROS/API" target="_blank">API - RouterOS - MikroTik Documentation</a>
 
 En esta página, encontrará una lista completa de los comandos de MikroTik disponibles y sus respectivos parámetros. También encontrará ejemplos de cómo usar estos comandos en la línea de comandos y la API de MikroTik.
 
@@ -144,6 +145,7 @@ Espero que esto le ayude a obtener más información sobre los comandos de Mikro
 
 ### License
 
-[MIT](https://github.com/jjjjose/mikro-client/blob/main/LICENSE)
+- <a href="https://github.com/jjjjose/mikro-client/blob/main/LICENSE" target="_blank">MIT</a>
+- ---
 
-Created by [jjjjose](https://github.com/jjjjose 'jjjjose') - 2022
+Created by <a href="https://github.com/jjjjose" target="_blank">jjjjose</a> - 2022
