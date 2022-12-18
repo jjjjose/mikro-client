@@ -1,29 +1,30 @@
 # mikro-client
 
-This library, written in TypeScript and also compatible with JavaScript, provides a simple connection via TCP sockets to send and receive command-line commands from MikroTik. With this library, you can easily and quickly control and get information from a MikroTik device.
+Esta biblioteca, escrita en TypeScript y también compatible con JavaScript, proporciona una conexión simple a través de sockets TCP para enviar y recibir comandos de línea de comandos de MikroTik. Con esta biblioteca, puede controlar y obtener información de un dispositivo MikroTik de forma sencilla y rápida.
 
-version documentation in:
+Version de documentación en:
 - [English](https://github.com/jjjjose/mikro-client/blob/main/README.md "English")
 - [Spanish](https://github.com/jjjjose/mikro-client/blob/main/README-es.md "Spanish")
+
 ## Installation
 
 ```bash
 npm install mikro-client
 ```
-or
+o
 ```bash
 yarn add mikro-client
 ```
 
-## Usage
+## Uso
 
-To use the class, you must first import it into your project:
+Para usar la clase, primero debe importarla en su proyecto:
 
 ```typescript
 import { MikroClient } from 'mikro-client'
 ```
 
-Then, you can create a new instance of the class by providing the necessary configuration options:
+Luego, puede crear una nueva instancia de la clase proporcionando las opciones de configuración necesarias:
 
 ```typescript
 const options = {
@@ -36,7 +37,7 @@ const options = {
 const mikro = new MikroClient(options)
 ```
 
-Once you have an instance of the class, you can use the "talk" method to send MikroTik commands to the device and receive the response:
+Una vez que tenga una instancia de la clase, puede usar el método "talk" para enviar comandos de MikroTik al dispositivo y recibir la respuesta
 
 ```typescript
 const response = await mikro
@@ -49,7 +50,7 @@ const response = await mikro
   })
 ```
 
-You can also specify the type of response you want to receive using the optional "type" argument:
+También puede especificar el tipo de respuesta que desea recibir usando el argumento opcional "type":
 
 ```typescript
 const response = await mikro
@@ -62,11 +63,11 @@ const response = await mikro
   })
 ```
 
-## Examples
+## Ejemplos
 
-  Here are some examples of MikroTik commands that you can send using the "talk" method:
+  Aquí hay algunos ejemplos de comandos de MikroTik que puede enviar usando el método "talk":
 
-  - Get network interface information:
+  - Obtener información de la interfaz de red:
 
   ```typescript
   const response = await mikro
@@ -79,7 +80,7 @@ const response = await mikro
     })
   ```
 
-  - Add a firewall rule:
+  - Agregar una regla de firewall:
 
   ```typescript
   mikro
@@ -98,7 +99,7 @@ const response = await mikro
     })
   ```
 
-  - Get connected user information:
+  - Obtener información de usuario conectado:
 
   ```typescript
   mikro
@@ -111,7 +112,7 @@ const response = await mikro
     })
   ```
 
-  - Create a hotspot user:
+  - Crear un usuario de hotspot:
 
   ```typescript
   mikro
@@ -129,15 +130,15 @@ const response = await mikro
     })
   ```
 
-### Information
+### Información
 
-For more information on the MikroTik commands that you can send using the MikroApi class, we recommend consulting the MikroTik documentation, which is available at the following link:
+Para obtener más información sobre los comandos de MikroTik que puede enviar usando la clase MikroApi, le recomendamos consultar la documentación de MikroTik, que está disponible en el siguiente enlace:
 
 - [API - RouterOS - MikroTik Documentation](https://help.mikrotik.com/docs/display/ROS/API)
 
-On this page, you will find a complete list of available MikroTik commands and their respective parameters. You will also find examples of how to use these commands in the MikroTik command line and API.
+En esta página, encontrará una lista completa de los comandos de MikroTik disponibles y sus respectivos parámetros. También encontrará ejemplos de cómo usar estos comandos en la línea de comandos y la API de MikroTik.
 
-I hope this helps you get more information on MikroTik commands and how to use them with the MikroApi class. If you have any additional questions, don't hesitate to ask.
+Espero que esto le ayude a obtener más información sobre los comandos de MikroTik y cómo usarlos con la clase MikroApi. Si tiene alguna pregunta adicional, no dude en preguntar.
 
 ---
 
