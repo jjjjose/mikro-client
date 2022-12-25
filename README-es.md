@@ -3,16 +3,18 @@
 Esta biblioteca, escrita en TypeScript y también compatible con JavaScript, proporciona una conexión simple a través de sockets TCP para enviar y recibir comandos de línea de comandos de MikroTik. Con esta biblioteca, puede controlar y obtener información de un dispositivo MikroTik de forma sencilla y rápida.
 
 Version de documentación en:
-- <a href="https://github.com/jjjjose/mikro-client/blob/main/README.md " target="_blank">English</a>
-- <a href="https://github.com/jjjjose/mikro-client/blob/main/README-es.md " target="_blank">Spanish</a>
 
+- <a href="https://github.com/jjjjose/mikro-client/blob/main/README.md" target="_blank">English</a>
+- <a href="https://github.com/jjjjose/mikro-client/blob/main/README-es.md" target="_blank">Spanish</a>
 
 ## Installation
 
 ```bash
 npm install mikro-client
 ```
+
 o
+
 ```bash
 yarn add mikro-client
 ```
@@ -66,70 +68,70 @@ const response = await mikro
 
 ## Ejemplos
 
-  Aquí hay algunos ejemplos de comandos de MikroTik que puede enviar usando el método "talk":
+Aquí hay algunos ejemplos de comandos de MikroTik que puede enviar usando el método "talk":
 
-  - Obtener información de la interfaz de red:
+- Obtener información de la interfaz de red:
 
-  ```typescript
-  const response = await mikro
-    .talk(['/interface/print'])
-    .then((response) => {
-      console.log(response)
-    })
-    .catch((error) => {
-      console.error(error)
-    })
-  ```
+```typescript
+const response = await mikro
+  .talk(['/interface/print'])
+  .then((response) => {
+    console.log(response)
+  })
+  .catch((error) => {
+    console.error(error)
+  })
+```
 
-  - Agregar una regla de firewall:
+- Agregar una regla de firewall:
 
-  ```typescript
-  mikro
-    .talk([
-      '/ip/firewall/filter/add',
-      '=chain=forward',
-      '=protocol=tcp',
-      '=dst-port=80',
-      '=action=accept',
-    ])
-    .then((response) => {
-      console.log(response)
-    })
-    .catch((error) => {
-      console.error(error)
-    })
-  ```
+```typescript
+mikro
+  .talk([
+    '/ip/firewall/filter/add',
+    '=chain=forward',
+    '=protocol=tcp',
+    '=dst-port=80',
+    '=action=accept',
+  ])
+  .then((response) => {
+    console.log(response)
+  })
+  .catch((error) => {
+    console.error(error)
+  })
+```
 
-  - Obtener información de usuario conectado:
+- Obtener información de usuario conectado:
 
-  ```typescript
-  mikro
-    .talk(['/ip/hotspot/active/print'])
-    .then((response) => {
-      console.log(response)
-    })
-    .catch((error) => {
-      console.error(error)
-    })
-  ```
+```typescript
+mikro
+  .talk(['/ip/hotspot/active/print'])
+  .then((response) => {
+    console.log(response)
+  })
+  .catch((error) => {
+    console.error(error)
+  })
+```
 
-  - Crear un usuario de hotspot:
+- Crear un usuario de hotspot:
 
-  ```typescript
-  mikro
-    .talk([
-      '/ip/hotspot/user/add',
-      '=name=example',
-      '=password=example',
-      '=profile=default',
-    ])
-    .then((response) => {
-      console.log(response)
-    })
-    .catch((error) => {
-      console.error(error)
-    })
-  ```
+```typescript
+mikro
+  .talk([
+    '/ip/hotspot/user/add',
+    '=name=example',
+    '=password=example',
+    '=profile=default',
+  ])
+  .then((response) => {
+    console.log(response)
+  })
+  .catch((error) => {
+    console.error(error)
+  })
+```
 
 ### Información
 
@@ -146,6 +148,7 @@ Espero que esto le ayude a obtener más información sobre los comandos de Mikro
 ### License
 
 - <a href="https://github.com/jjjjose/mikro-client/blob/main/LICENSE" target="_blank">MIT</a>
-- ---
+
+---
 
 Created by <a href="https://github.com/jjjjose" target="_blank">jjjjose</a> - 2022

@@ -1,6 +1,6 @@
 {
   "name": "mikro-client",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Simple library using socket API to connect and control Mikrotik devices in JavaScript or TypeScript. Allows for easy automation of Mikrotik device management and configuration tasks.",
   "main": "dist/index",
   "types": "dist/index",
